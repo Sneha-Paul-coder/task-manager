@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="A task manager app to organize your life"
+      content="Organize your life with a task manager app built using JavaScript and Bootstrap."
     />
     <title>Task Manager</title>
     <link
@@ -19,14 +19,20 @@
     <script type="module" src="task-manager.js"></script>
   </head>
   <body>
-    <header class="container">
+    <header class="container py-4">
       <h1 class="display-1">Task Manager</h1>
+      <p class="fw-light">Stay organized and productive</p>
     </header>
 
-    <main class="container">
+    <main class="container py-4">
       <div class="py-3">
-        <input type="text" placeholder="Enter Task" id="task-name" />
-        <button id="btn">Add Task</button>
+        <input
+          type="text"
+          placeholder="Enter Task"
+          id="task-name"
+          class="py-2"
+        />
+        <button id="btn" class="py-2">Add Task</button>
       </div>
       <div class="py-3">
         <ul id="task-list" class="list-group col-md-6"></ul>
