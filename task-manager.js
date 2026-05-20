@@ -12,6 +12,16 @@ function deleteTask(id) {
   render();
 }
 
+function toggleTask(id) {
+  tasks = tasks.map((task) =>
+    task.id === id ? { ...task, completed: !task.completed } : task
+  );
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  render();
+}
+
 function render() {
   taskListEl.innerHTML = "";
 
@@ -30,6 +40,10 @@ function render() {
     label.textContent = task.text;
     label.className = "flex-grow-1 ms-2";
 
+    if (task.completed) {
+      label.style.textDecoration = "line-through";
+    }
+
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "btn btn-danger btn-sm";
 
@@ -44,16 +58,6 @@ function render() {
 
     taskListEl.appendChild(li);
   });
-}
-
-function toggleTask(id) {
-  tasks = tasks.map((task) =>
-    task.id === id ? { ...task, completed: !task.completed } : task
-  );
-
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-
-  render();
 }
 
 function addTaskBtn() {
