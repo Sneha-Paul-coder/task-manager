@@ -29,7 +29,7 @@ function render() {
     const li = document.createElement("li");
 
     li.className =
-      "list-group-item d-flex  justify-content-between align-items-center";
+      "list-group-item d-flex";
 
     const checkboxInput = document.createElement("input");
     checkboxInput.type = "checkbox";
