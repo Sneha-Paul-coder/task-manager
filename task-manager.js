@@ -25,6 +25,13 @@ function toggleTask(id) {
 function render() {
   taskListEl.innerHTML = "";
 
+    if (tasks.length === 0) {
+    taskListEl.innerHTML =
+      '<li class="list-group-item text-muted">No tasks added yet.</li>';
+
+    return;
+  }
+
   tasks.forEach((task) => {
     const li = document.createElement("li");
 
