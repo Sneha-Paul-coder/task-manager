@@ -18,24 +18,24 @@
 
     <script type="module" src="task-manager.js"></script>
   </head>
-  <body>
+  <body style="background-color: #f8f9fa">
     <header class="py-4 bg-dark text-light text-center">
       <h1 class="display-1">Task Manager</h1>
       <p class="fw-light">Stay organized and productive</p>
     </header>
 
-    <<main class="container py-4 text-center">
-      <div class="py-3">
+    <main class="container py-4">
+      <div class="py-3 d-flex justify-content-center gap-2 flex-wrap">
         <input
           type="text"
           placeholder="Enter Task"
           id="task-name"
-          class="py-2"
+          class="form-control w-auto py-2"
         />
-        <button id="btn" class="py-2">Add Task</button>
+        <button id="btn" class="btn btn-primary">Add Task</button>
       </div>
       <div class="py-3 d-flex justify-content-center">
-        <ul id="task-list" class="list-group col-10 col-md-6"></ul>
+        <ul id="task-list" class="list-group col-10 col-md-6 shadow-sm"></ul>
       </div>
     </main>
   </body>
